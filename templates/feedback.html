@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='./feedback.css')}}">
+    <title>CSCB20-Course Team</title>
+    
+</head>
+
+{% block body %}
+
+<body class="team">
+    <main class="content">
+        <div class="commonHeader">
+            <div class="commonTop">
+                <h1 id="commonClass">CSCB20 - Winter 2019</h1>
+                <h1 id="commonDesc">Introduction to Databases and Web Applications</h1>
+            </div>
+            <div id="uoftlogo">
+                <img src="{{url_for('static', filename='images/UofT_logo.png')}}" width="262" height="89" alt="Uoft Logo">
+            </div> 
+            <div class="commonBot">
+                <ul id="commonul">
+                    <li id="commonli"> <a href="index">Home</a> </li>
+                    <li id="commonli"> <a href="team">Course Team</a> </li>
+                    <li id="commonli"> <a href="assignments">Assignments</a> </li>
+                    <li id="commonli"> <a href="syllabus">Syllabus</a> </li>
+                    <li id="commonli"> <a href="feedback">Feedback</a> </li>
+                    <li id="commonli"> <a href="marks">Marks</a> </li>
+                    <li id="commonli"> <a href="https://piazza.com/class/jr7mjhytaij3jc" target="_blank">Piazza</a> </li>
+                    <li id="commonli"> <a href="https://markus.utsc.utoronto.ca/cscb20w19" target="_blank">Markus</a> </li>
+                    <li id="commonli"> <a href="labs">Labs</a> </li>
+                    <li id="commonli"> <a href="logout">Logout</a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="stuff">
+            <div id = "whitetextbox">
+                
+                <h3>{{fail}}</h3> <br> <br>
+                Here are the name and usernames of your instructors, please enter it correctly into the boxes below to send it to them! <br> <br>
+                {% for instructor in instructors %}
+                Name: {{instructor.FirstName}} {{instructor.LastName}}, Username: {{instructor.username}}<br>
+                {% endfor %} 
+                <br> <br>
+
+
+                <form action="/submitfeedback" method = "POST" name = "feedbacksubmit">
+                Please leave your comments in the boxes below, and submit when are you finished. We take all feedback seriously. <br><br>
+                Please enter the username of your instructor you are completing this evaluation for<br>
+                <input type = "text" name = "username">  <br>
+                Please enter the first name of your instructor you are completing this evaluation for<br>
+                <input type = "text" name = "firstname">  <br>
+                A) What do you like about the instructor teaching?<br>
+                <input type = "text" name = "question1"> <br>
+                B) What do you recommend the instructor to do to improve their teaching?<br>
+                <input type = "text" name = "question2"> <br>
+                C) What do you like about the labs?<br>
+                <input type = "text" name = "question3"> <br>
+                D) What do you recommend the lab instructors to do to improve their lab teaching?<br>
+                <input type = "text" name = "question4"> <br>
+                <input type = "submit" value = "Submit" >
+                </form>
+            </div>
+
+
+        </main>
+
+        <footer class="footerClass">
+            <p class="footerText">
+                <small>Designed by Usama Khan and Mike Yang</small>
+                <br><br>
+                <small><a id="faculty" href="http://web.cs.toronto.edu/home.htm" target="_blank">UofT Computer Science</a></small>
+            </p>
+        </footer>
+     
+    </div>
+</body>
+
+{% endblock %}
+
+</html>

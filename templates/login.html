@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/login.css">        <!-- css file linked here -->
+    <title>CSCB20 - Login</title>
+</head>
+
+{% block body %}
+<body>
+    <main class="content">
+        <form action='/login' method = "POST">
+            <div id="commonlogo">
+                <img src="{{url_for('static', filename='images/logo_colour.png')}}" class="colourLogo" alt="Uoft Logo">
+            </div> 
+            <h1>Login</h1>
+            <input type=text placeholder='username' name='username'>
+            <input type=password placeholder='password' name='password'>
+            <p></p><input class='button' type='submit' value='Login'>
+            <br>
+            <a href="signup">Signup</a> <br>
+            {% if error %}
+                <p class="error">Error: {{ error }}</p>
+            {% endif %}
+        </form>
+    </main>
+</body>
+{% endblock %}
+
+</html>

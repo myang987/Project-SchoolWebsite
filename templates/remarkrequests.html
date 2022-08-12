@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='./labs.css')}}">
+    <title>CSCB20-Remark Requests</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+	
+</head>
+
+{% block body %}
+
+{{ title }}
+
+<body class="team">
+    <main class="content">
+        <div class="commonHeader">
+            <div class="commonTop">
+                <h1 id="commonClass">CSCB20 - Winter 2019</h1>
+                <h1 id="commonDesc">Introduction to Databases and Web Applications</h1>
+            </div>
+            <div id="uoftlogo">
+                <img src="{{url_for('static', filename='images/UofT_logo.png')}}" width="262" height="89" alt="Uoft Logo">
+            </div> 
+            <div class="commonBot">
+                <ul id="commonul">
+                    <li id="commonli"> <a href="index">Home</a> </li>
+                    <li id="commonli"> <a href="team">Course Team</a> </li>
+                    <li id="commonli"> <a href="assignments">Assignments</a> </li>
+                    <li id="commonli"> <a href="syllabus">Syllabus</a> </li>
+                    <li id="commonli"> <a href="feedback">Feedback</a> </li>
+                    <li id="commonli"> <a href="marks">Marks</a> </li>
+                    <li id="commonli"> <a href="https://piazza.com/class/jr7mjhytaij3jc" target="_blank">Piazza</a> </li>
+                    <li id="commonli"> <a href="https://markus.utsc.utoronto.ca/cscb20w19" target="_blank">Markus</a> </li>
+                    <li id="commonli"> <a href="labs">Labs</a> </li>
+                    <li id="commonli"> <a href="logout">Logout</a> </li>
+                </ul>
+            </div>
+        </div>
+        <h3> You can find all your remark requests here from students </h3>
+        {% for post in data %}
+            <h1>Student Name:{{post.Firstname}} {{post.Lastname}}, {{post.username}}</h1>
+            <p>Assignment 1: {{post.RemarkA1}}</p>
+            <p>Assignment 2: {{post.RemarkA2}}</p>
+            <p>Assignment 3: {{post.RemarkA3}}</p>
+            <p>Quiz 1: {{post.RemarkQuiz1}}</p>
+            <p>Quiz 2: {{post.RemarkQuiz2}}</p>
+            <p>Quiz 3: {{post.RemarkQuiz3}}</p>
+            <p>Midterm Exam:{{post.RemarkMidterm}}</p>
+            <p>Final Exam: {{post.RemarkFinal}}</p>
+        {% endfor %}
+
+        
+        
+    </main>
+
+    <footer class="footerClass">
+        <p class="footerText">
+            <small>Designed by Usama Khan and Mike Yang</small>
+            <br><br>
+            <small><a id="faculty" href="http://web.cs.toronto.edu/home.htm" target="_blank">UofT Computer Science</a></small>
+        </p>
+    </footer>
+</body>
+
+{% endblock %}
+
+</html>

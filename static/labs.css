@@ -1,0 +1,224 @@
+html, body{
+  height: 100%;
+}
+
+main{
+  min-height: 100%;
+  overflow: auto;
+  padding-bottom: 60px;
+}
+
+.team{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  align-content: center;
+  min-width:850px;
+  width: auto !important;
+  width:850px;
+  background-color: #ECF6FF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+
+.commonlogo{
+top: 10px;
+left: 30px;
+overflow:auto;
+align-content: left;
+margin-left: 0%;
+margin-top:20px;
+}
+
+
+.commonTop{
+  overflow: auto;
+  text-align: center;
+  line-height: 20px;
+  background-color: #002F65;
+  color: white;
+  font-size: 10px;
+}
+
+.commonBot{
+  list-style: none;
+  overflow: hidden;
+  background-color: #00408A;
+}
+
+
+#commonli, #commonul{
+  color: white;
+  background-color: #00408A;
+  text-align: center;
+  text-decoration: none;
+}
+
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color:#00408A;
+}
+
+li {
+  float: left;
+
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+a:hover { 
+  background-color: #498CD9;
+  color:white;
+  text-decoration: underline;
+}
+
+td {
+    color: #2C75C9;
+}
+
+#uoftlogo {
+  position: absolute;
+  top: 1px;
+  left: 30px;
+}
+
+/* footer */
+
+.footerClass{
+  position: relative;
+  background-color: white;
+  height: 60px;
+  margin-top: -60px;
+  clear: both;
+  bottom: 0;
+}
+
+.footerText{
+text-align: center !important;
+
+}
+
+#faculty:visited {
+text-decoration: none;
+color: black;
+}
+
+
+.header2 {
+  font-size: 15px;
+  font-weight: bold;
+  color: darkblue;
+  text-align: center;
+
+}
+
+
+#textbox {
+  margin-right:17%;
+  margin-left:17%;
+  color: white;
+  margin-top: 0px;
+  display:inline-block;
+  align-content: center;
+  max-width: 100%;
+  padding-top: 0px;
+
+}   
+
+#textboxblack {
+  color: black;
+  margin-top: 0px;
+  padding-top: 0px;
+  margin-right: 2%;
+  margin-left: 2%;
+
+}
+
+ 
+.maintext{
+  font-size: 16px;
+  font-family:(Arial, Helvetica, sans-serif);
+  color: black;
+  padding: 5px;
+  justify-content: center;
+  text-align: center;
+}
+.maintextblue{
+  font-size: 16px;
+  font-family:(Arial, Helvetica, sans-serif);
+  color: #050095;
+  padding: 5px;
+  justify-content: center;
+  text-align: left;
+}
+
+.container {
+display: flex;
+margin-right: 17%;
+margin-left: 17%;
+text-align: center;
+align-content: center;
+justify-content: center;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
+padding-top: 4px;
+padding-bottom: 5px;
+
+}
+
+.block {
+display:block;
+margin-right: 17%;
+margin-left: 17%;
+border-bottom: 2px;
+border-color: gray;
+
+}
+
+.flexcontainer{
+display: inline-flex;
+padding: 10px;
+width: 60%;
+}
+
+#textboxblack:hover {
+box-shadow: 2px 2px 2px 2px #888888;
+}
+
+.block:hover {
+box-shadow: 2px 2px 2px 2px #888888;
+}
+
+.commonHeader{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.stuff{
+  margin-top:150px;
+}
+
+.navbar {
+overflow: hidden;
+position: fixed; 
+top: 0px; 
+width:100%;
+
+}
+

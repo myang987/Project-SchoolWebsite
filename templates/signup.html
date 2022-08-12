@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/login.css">        <!-- css file linked here -->
+    <title>CSCB20 - Signup</title>
+</head>
+
+{% block body %}
+<body>
+    <main class="content">
+        <form action='/signupform' method = "POST" name ="signupform">
+            <h1>Signup</h1>
+            Please enter your desired username<br>
+            <input type=text placeholder='username' name='username'><br>
+            Please enter your First name<br>
+            <input type=text placeholder='firstname' name='firstname'><br>
+            Please enter your last name<br>
+            <input type=text placeholder='lastname' name='lastname'><br>
+            Please enter your password<br>
+            <input type=password placeholder='password' name='password'><br>
+            Select your user type<br><br>
+            Instructor
+            <input type="radio" checked="checked" name="options" value="instructor">
+            Student
+            <input type="radio" name="options" value="student">
+            <p></p><input class='button' type='submit' value='Signup'><br>
+            <a href="login">Login</a> <br>
+            {% if error %}
+                <p class="error">Error: {{ error }}</p>
+            {% endif %}
+        </form>
+    </main>
+</body>
+{% endblock %}
+
+</html>

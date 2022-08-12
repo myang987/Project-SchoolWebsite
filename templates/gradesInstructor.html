@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='./labs.css')}}">
+    <title>CSCB20-Course Team</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    
+    <script>
+        function EditMark()
+        {
+            $(".editMark").show();
+        }
+
+        function hide()
+        {
+            $(".editMark").hide();
+        }
+    </script>
+</head>
+
+{% block body %}
+
+{{ title }}
+
+<body class="team" onload="hide()">
+    <main class="content">
+        <div class="commonHeader">
+            <div class="commonTop">
+                <h1 id="commonClass">CSCB20 - Winter 2019</h1>
+                <h1 id="commonDesc">Introduction to Databases and Web Applications</h1>
+            </div>
+            <div id="uoftlogo">
+                <img src="{{url_for('static', filename='images/UofT_logo.png')}}" width="262" height="89" alt="Uoft Logo">
+            </div> 
+            <div class="commonBot">
+                <ul id="commonul">
+                    <li id="commonli"> <a href="index">Home</a> </li>
+                    <li id="commonli"> <a href="team">Course Team</a> </li>
+                    <li id="commonli"> <a href="assignments">Assignments</a> </li>
+                    <li id="commonli"> <a href="syllabus">Syllabus</a> </li>
+                    <li id="commonli"> <a href="feedback">Feedback</a> </li>
+                    <li id="commonli"> <a href="marks">Marks</a> </li>
+                    <li id="commonli"> <a href="https://piazza.com/class/jr7mjhytaij3jc" target="_blank">Piazza</a> </li>
+                    <li id="commonli"> <a href="https://markus.utsc.utoronto.ca/cscb20w19" target="_blank">Markus</a> </li>
+                    <li id="commonli"> <a href="labs">Labs</a> </li>
+                    <li id="commonli"> <a href="logout">Logout</a> </li>
+                </ul>
+            </div>
+        </div> 
+
+        <div class="stuff">
+            <br><br>
+            <h3> To view all your remark requests, please click this link <a href="remarkrequests"> here</a> </h3>
+            <h3>{{message}}</h3><br><br>
+            These are the grades for all students in your course, titled by First Name, Last Name, Username<br>
+            To edit the mark of a student, go to the bottom of the page and press edit mark, enter the student username and submit!<br>
+            <br>
+            {% for post in data %}
+                <h1>Student Name:{{post.Firstname}} {{post.Lastname}}, {{post.username}} </h1>
+                <p>Assignment 1: {{post.A1}}</p>
+                <p>Assignment 2: {{post.A2}}</p>
+                <p>Assignment 3: {{post.A3}}</p>
+                <p>Quiz 1: {{post.Quiz1}}</p>
+                <p>Quiz 2: {{post.Quiz2}}</p>
+                <p>Quiz 3: {{post.Quiz3}}</p>
+                <p>Midterm Exam:{{post.Midterm}}</p>
+                <p>Final Exam: {{post.Final}}</p>
+            {% endfor %}
+
+                <div class="editMark">
+                    <form action="/editmark" method="POST" >
+                        Enter The student's username that you are changing : <input type="text" name="student"></input><br>
+                        Enter new Assignment 1 Mark: <input type="text" name="A1"></input><br>
+                        Enter new Assignment 2 Mark: <input type="text" name="A2"></input><br>   
+                        Enter new Assignment 3 Mark: <input type="text" name="A3"></input><br>   
+                        Enter new Quiz 1 Mark: <input type="text" name="Quiz1"></input><br>
+                        Enter new Quiz 2 Mark: <input type="text" name="Quiz2"></input><br>
+                        Enter new Quiz 3 Mark: <input type="text" name="Quiz3"></input><br>
+                        Enter new Midterm Exam: <input type="text" name="Midterm"></input><br>
+                        Enter new Final Exam Mark <input type="text" name="Final"></input>
+                        <br><input type="submit" value="submit"><br><br>
+                    </form>
+                </div>
+            <button onclick="EditMark()">Edit Mark</button>
+            
+        </main>
+
+        <footer class="footerClass">
+            <p class="footerText">
+                <small>Designed by Usama Khan and Mike Yang</small>
+                <br><br>
+                <small><a id="faculty" href="http://web.cs.toronto.edu/home.htm" target="_blank">UofT Computer Science</a></small>
+            </p>
+        </footer>
+    </div>
+</body>
+
+{% endblock %}
+
+</html>

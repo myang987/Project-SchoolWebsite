@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='./syllabus.css')}}">
+    <title>CSCB20-Course Team</title>
+</head>
+
+{% block body %}
+
+<body class="team">
+    <main class="content">
+        <div class="commonHeader">
+            <div class="commonTop">
+                <h1 id="commonClass">CSCB20 - Winter 2019</h1>
+                <h1 id="commonDesc">Introduction to Databases and Web Applications</h1>
+            </div>
+            <div id="uoftlogo">
+                <img src="{{url_for('static', filename='images/UofT_logo.png')}}" width="262" height="89" alt="Uoft Logo">
+            </div> 
+            <div class="commonBot">
+                <ul id="commonul">
+                    <li id="commonli"> <a href="index">Home</a> </li>
+                    <li id="commonli"> <a href="team">Course Team</a> </li>
+                    <li id="commonli"> <a href="assignments">Assignments</a> </li>
+                    <li id="commonli"> <a href="syllabus">Syllabus</a> </li>
+                    <li id="commonli"> <a href="feedback">Feedback</a> </li>
+                    <li id="commonli"> <a href="marks">Marks</a> </li>
+                    <li id="commonli"> <a href="https://piazza.com/class/jr7mjhytaij3jc" target="_blank">Piazza</a> </li>
+                    <li id="commonli"> <a href="https://markus.utsc.utoronto.ca/cscb20w19" target="_blank">Markus</a> </li>
+                    <li id="commonli"> <a href="labs">Labs</a> </li>
+                    <li id="commonli"> <a href="logout">Logout</a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="stuff">
+            <div>
+                <h3 class= header2> <u>Syllabus</u> </h3>
+                <p class = "maintext">The course syllabus can be downloaded <a href = "../src/syllabus.pdf" target="_blank">here</a> </p>
+                <br>
+                <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=j5qv39bp1oto43rej0ddtd0lhs%40group.calendar.google.com&amp;color=%236B3304&amp;ctz=America%2FToronto"></iframe>
+            </div>
+
+            <div class = "block">
+                <h3 class= header2> <u>Midterm</u> </h3>
+                <h4>2017-1 Winter - CSCB20 - Midterm - Room Allocation</h4>
+                <br>
+            </div>
+
+            <div class = "container">
+
+                <div id = "textboxblack">
+                    <u><b> Course </b> </u> <br><br>
+                    CSCB20<br>A.Bretscher<br>
+                </div>
+
+                <div id = "textboxblack">
+                    <u><b> Date </b> </u> <br><br>
+                    Monday 13, February<br>
+                    @5:00 PM<br>
+                    <br>
+                </div>
+
+                <div id = "textboxblack">
+                    <u><b></b> </u> <br><br>
+                    1<br>2<br>
+                </div>
+
+                <div id = "textboxblack">
+                    <u><b> Capacity </b> </u> <br><br>
+                    50<br>
+                    110
+                    <br><br>
+                    160
+                    <br>
+                </div>
+                
+                <div id = "textboxblack">
+                    <u><b> Room # </b> </u> <br><br>
+                    HW 215<br>HW 216<br><br>
+                </div>
+
+                <div id = "textboxblack">
+                    <u><b> Last Name </b> </u> <br><br>
+                    A - HE <br>
+                    HO - Z
+                    <br><br>
+                    <b>TOTAL</b>
+                    <br>
+                </div>
+
+                <div id = "textboxblack">
+                    <u><b> # of Students </b> </u> <br><br>
+                    48<br>
+                    108<br>
+                    <br>
+                    <b>156</b>
+                    <br>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footerClass">
+            <p class="footerText">
+                <small>Designed by Usama Khan and Mike Yang</small>
+                <br><br>
+                <small><a id="faculty" href="http://web.cs.toronto.edu/home.htm" target="_blank">UofT Computer Science</a></small>
+            </p>
+        </footer>
+    </div>
+</body>
+
+{% endblock %}
+
+</html>

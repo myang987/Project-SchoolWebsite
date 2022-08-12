@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='./index.css')}}">        <!-- css file linked here -->
+    <title>CSCB20</title>
+</head>
+
+{% block body %}
+
+{% if session['logged_in'] %}
+
+
+{% else %}
+
+<body>
+  <main class="content">
+    <div id="commonlogo">
+      <img src="{{url_for('static', filename='images/UofT_logo.png')}}" width="262" height="89" alt="Uoft Logo">
+    </div> 
+   
+    <h1 class="headers"><u> Welcome to CSCB20 Course Webpage, {{user}}! </u></h1>
+
+
+    <div id="textbox">
+      <h4 class = "header2"> Course Information </h4>
+      
+      <p class = "maintext"> 
+        Welcome to your course 
+
+        A practical introduction to databases and Web app development. Databases: terminology and applications; creating, querying and updating databases; the entity-relationship model for database design. Web documents and applications: static and interactive documents; Web servers and dynamic server-generated content; Web application development and interface with databases. <br> <br>
+        Prerequisite Some experience with programming in an imperative language such as Python, Java or C. <br><br>
+
+        Exclusion This course may not be taken after - or concurrently with - any C- or D-level CSC course.<br>
+      </p>
+
+      <br><br>
+
+      <ul>
+        <li> <a href="index">Home</a> </li>
+        <li> <a href="team">Course Team</a> </li>
+        <li> <a href="assignments">Assignments</a> </li>
+        <li> <a href="syllabus">Syllabus</a> </li>
+        <li> <a href="feedback">Feedback</a> </li>
+        <li> <a href="marks">Marks</a> </li>
+        <li> <a href="https://piazza.com/class/jr7mjhytaij3jc" target="_blank">Piazza</a> </li>
+        <li> <a href="https://markus.utsc.utoronto.ca/cscb20w19" target="_blank">Markus</a> </li>
+        <li> <a href="labs">Labs</a> </li>
+        <li> <a href="logout">Logout</a> </li>
+      </ul>
+    </div>
+
+    <br><br>
+    
+    <div id = "whitetextbox">
+
+    
+      <h1 class="headersblue">
+      General Information </h1>
+
+    </div>
+
+    <div id = "whitetextbox">    
+      <br><br>
+      <div id=genInfo>
+      <div id="genTitle"><b>Instructor: </b></div><div id="genBlack">Attarwala, Abbas Mohsin</div><br>
+      <div id="genTitle"><b>Email: </b></div><div id="genBlack">abbas.attarwala@utoronto.ca</div><br>
+      <div id="genTitle"><b>Office Hours: </b></div><div id="genBlack">Monday, 9:00pm - 11:00pm, HL001</div><br>
+      <div id="genTitle"><b>Course Website: </b></div><div id="genLink"> <a id="infoLink" href="http://www.utsc.utoronto.ca/~bretscher/b20/index.html" target="_blank">http://www.utsc.utoronto.ca/~bretscher/b20/index.html</a></div><br>
+      <div id="genTitle"><b>Discussion forum: </b></div><div id="genLink"><a id="infoLink" href="https://piazza.com/class/jr7mjhytaij3jc" target="_blank">https://piazza.com/class/jr7mjhytaij3jc</a></div><br>
+      <div id="genTitle"><b>Markus: </b></div><div id="genLink"><a id="infoLink" href="https://markus.utsc.utoronto.ca/cscb20w19" target="_blank">https://markus.utsc.utoronto.ca/cscb20w19</a></div><br>
+    </div>
+
+    <br><br><br>
+
+    <div class = "flexcontainer">
+      <div id="textboxblack">
+        <p class = "maintextblue"> 
+          <b><u>Activity</u></b> <br>
+          <br>
+          Lec01 <br>
+          Tut0001 <br>
+          Tut0002 <br>
+          Tut0003 <br>
+          Tut0004 <br>
+        </p>
+      </div>
+
+      <div id="textboxblack">
+        <p class = "maintextblue"> 
+          <b><u>Time</u></b> <br>
+          <br>
+          Monday 9-11am <br>
+          Tuesday 9-11am <br>
+          Wednesday 9-11am <br>
+          Thursday 9-11am <br>
+          Friday 9-11am <br> 
+        </p>
+      </div>
+
+      <div id="textboxblack">
+        <p class = "maintextblue"> 
+          <b><u>Location</u></b> <br>
+          <br>
+          HL001 <br>
+          BV473 <br>
+          BV473 <br>
+          BV473 <br>
+          BV473 <br> 
+        </p>
+      </div>
+
+      <div id="textboxblack">
+        <p class = "maintextblue"> 
+          <b><u>Instructor</u></b> <br>
+          <br>
+          Abbas Attarwala <br>
+          TBA <br>
+          TBA <br>
+          TBA <br>
+          TBA <br> 
+        </p>
+      </div>
+    </div>
+  </main>
+
+    <footer class="footerClass">
+        <p class="footerText">
+            <small>Designed by Usama Khan and Mike Yang</small>
+            <br><br>
+            <small><a id="faculty" href="http://web.cs.toronto.edu/home.htm" target="_blank">UofT Computer Science</a></small>
+        </p>
+    </footer>
+</body>
+ 
+{% endif %}
+{% endblock %}
+
+</html>
+
+

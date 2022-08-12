@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='./labs.css')}}">
+    <title>CSCB20-Course Team</title>
+</head>
+
+{% block body %}
+
+<body class="team">
+    <main class="content">
+        <div class="commonHeader">
+            <div class="commonTop">
+                <h1 id="commonClass">CSCB20 - Winter 2019</h1>
+                <h1 id="commonDesc">Introduction to Databases and Web Applications</h1>
+            </div>
+            <div id="uoftlogo">
+                <img src="{{url_for('static', filename='images/UofT_logo.png')}}" width="262" height="89" alt="Uoft Logo">
+            </div> 
+            <div class="commonBot">
+                <ul id="commonul">
+                    <li id="commonli"> <a href="index">Home</a> </li>
+                    <li id="commonli"> <a href="team">Course Team</a> </li>
+                    <li id="commonli"> <a href="assignments">Assignments</a> </li>
+                    <li id="commonli"> <a href="syllabus">Syllabus</a> </li>
+                    <li id="commonli"> <a href="feedback">Feedback</a> </li>
+                    <li id="commonli"> <a href="marks">Marks</a> </li>
+                    <li id="commonli"> <a href="https://piazza.com/class/jr7mjhytaij3jc" target="_blank">Piazza</a> </li>
+                    <li id="commonli"> <a href="https://markus.utsc.utoronto.ca/cscb20w19" target="_blank">Markus</a> </li>
+                    <li id="commonli"> <a href="labs">Labs</a> </li>
+                    <li id="commonli"> <a href="logout">Logout</a> </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="stuff">
+            <div class = "block">
+                <h3 class= header2> <u>Tutorial Sections</u> </h3>
+                <p class = "maintext"> Please go to your tutorial section on ACORN </p>
+            </div>
+        
+            <div class = "flexcontainer">
+                <div id="textboxblack">
+                    <p class = "maintextblue"> 
+                        <b><u>Activity</u></b> <br>
+                        <br>
+                        Tut0001 <br>
+                        Tut0002 <br>
+                        Tut0003 <br>
+                        Tut0004 <br>
+                    </p>
+                </div>
+
+                <div id="textboxblack">
+                    <p class = "maintextblue"> 
+                        <b><u>Time</u></b> <br>
+                        <br>
+                        Tuesday 9-11am <br>
+                        Wednesday 9-11am <br>
+                        Thursday 9-11am <br>
+                        Friday 9-11am <br> 
+                    </p>
+                </div>
+
+                <div id="textboxblack">
+                    <p class = "maintextblue"> 
+                        <b><u>Location</u></b> <br>
+                        <br>
+                        BV473 <br>
+                        BV473 <br>
+                        BV473 <br>
+                        BV473 <br> 
+                    </p>
+                </div>
+
+                <div id="textboxblack">
+                    <p class = "maintextblue"> 
+                        <b><u>Instructor</u></b> <br>
+                        <br>
+                        TBA <br>
+                        TBA <br>
+                        TBA <br>
+                        TBA <br> 
+                    </p>
+                </div>
+            </div>
+
+            <div class = "block">
+                <h3 class= header2> <u>Tutorial Exercises</u> </h3>
+                <p class = "maintext"> This section contains the tutorial exercises <br> Tutorials are held every week. The first tutorial week is week 2. Please make use of this valuable resource!  </p>
+                <br><br>
+            </div>
+
+            <div class = "container">
+                <div id = "textboxblack">
+                    <u><b> Week </b> </u> <br><br>
+                    2<br>3<br>4<br>5<br>6<br>
+                </div>
+
+                <div id = "textboxblack">
+                    <u><b> Lab </b> </u> <br><br>
+                    <a href = "../src/syllabus.pdf"> Handout </a><br>
+                    <a href = "../src/syllabus.pdf"> Handout </a><br>
+                    <a href = "../src/syllabus.pdf"> Handout </a><br>
+                    <a href = "../src/syllabus.pdf"> Handout </a><br>
+                    <a href = "../src/syllabus.pdf"> Handout </a><br>
+
+                </div>
+
+                <div id = "textboxblack">
+                    <u><b> Solutions </b> </u> <br><br>
+                    <a href = "../src/syllabus.pdf"> Solns </a><br>
+                    <a href = "../src/syllabus.pdf"> Solns </a><br>
+                    <a href = "../src/syllabus.pdf"> Solns </a><br>
+                    <a href = "../src/syllabus.pdf"> Solns </a><br>
+                    <a href = "../src/syllabus.pdf"> Solns </a><br>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer class="footerClass">
+            <p class="footerText">
+                <small>Designed by Usama Khan and Mike Yang</small>
+                <br><br>
+                <small><a id="faculty" href="http://web.cs.toronto.edu/home.htm" target="_blank">UofT Computer Science</a></small>
+            </p>
+        </footer>
+    </div>
+</body>
+
+{% endblock %}
+
+</html>
